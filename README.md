@@ -1,15 +1,33 @@
-# sign_in_apple_flutter
+# 苹果登录Flutter插件
 
-A new Flutter project.
+## 简介
+  一款集成了iOS苹果登录功能的Flutter插件,仅支持iOS系统
 
-## Getting Started
+## 集成步骤
+#### 1、pubspec.yaml
+```Dart
+sign_in_apple_flutter:
+  git: https://github.com/Guardiany/sign_in_apple_flutter.git
+```
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+#### 2、IOS
+确保在 [https://developer.apple.com/account/resources/identifiers/list/bundleId](https://developer.apple.com/account/resources/identifiers/list/bundleId)
+的列表中设置你要添加苹果登录的Bundle ID，然后在对应的Capabilities中勾选 Sign In with Apple
+Xcode 中 TARGETS的Capabilities 同样要添加 Sign In with Apple
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 使用
 
+#### 1、苹果登录
+```Dart
+SignInAppleFlutter.signInApple(
+  success: (info) {
+    print(info);
+  },
+  error: (error) {
+    print(error);
+  },
+);
+```
+
+## 联系方式
+* Email: 1204493146@qq.com

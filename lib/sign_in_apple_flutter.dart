@@ -1,5 +1,6 @@
 
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/services.dart';
 
@@ -19,6 +20,9 @@ class SignInAppleFlutter {
     OnSignInAppleSuccess? success,
     OnSignInAppleError? error,
   }) async {
+    if (!Platform.isIOS) {
+      return;
+    }
     _channel.setMethodCallHandler((call) async {
       switch (call.method) {
         case 'success':
