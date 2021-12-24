@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - sign_in_apple_flutter (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - sign_in_apple_flutter (from `.symlinks/plugins/sign_in_apple_flutter/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  sign_in_apple_flutter:
+    :path: ".symlinks/plugins/sign_in_apple_flutter/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  sign_in_apple_flutter: 245d0bfc9f47037c2c450f971e71bd51a07a334d
+
+PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
+
+COCOAPODS: 1.10.2
