@@ -21,7 +21,7 @@ Xcode 中 TARGETS的Capabilities 同样要添加 Sign In with Apple
 ```Dart
 SignInAppleFlutter.signInApple(
   success: (info) {
-    print(info);
+    print(info['userId']);
   },
   error: (error) {
     print(error);

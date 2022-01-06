@@ -32,7 +32,7 @@ class SignInAppleFlutter {
           break;
         case 'error':
           if (error != null) {
-            error(call.arguments);
+            error(call.arguments['message']);
           }
           break;
       }
