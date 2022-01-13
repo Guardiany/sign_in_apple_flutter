@@ -12,7 +12,7 @@ sign_in_apple_flutter:
 
 #### 2、IOS
 确保在 [https://developer.apple.com/account/resources/identifiers/list/bundleId](https://developer.apple.com/account/resources/identifiers/list/bundleId)
-的列表中设置你要添加苹果登录的Bundle ID，然后在对应的Capabilities中勾选 Sign In with Apple
+的列表中设置你要添加苹果登录的Bundle ID，然后在对应的Capabilities中勾选 Sign In with Apple，
 Xcode 中 TARGETS的Capabilities 同样要添加 Sign In with Apple
 
 ## 使用

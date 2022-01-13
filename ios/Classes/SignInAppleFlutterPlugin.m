@@ -64,7 +64,29 @@ FlutterMethodChannel *flutterChannel;
 }
 
 - (void)authorizationController:(ASAuthorizationController *)controller didCompleteWithError:(NSError *)error  API_AVAILABLE(ios(13.0)){
-    NSDictionary *resultDic = [[NSDictionary alloc] initWithObjectsAndKeys:@"error", @"result", error.description, @"message", nil];
+    
+    NSString *msg = @"未知错误";
+    switch (error.code) {
+        case ASAuthorizationErrorCanceled:
+            msg = @"用户取消";
+            break;
+        case ASAuthorizationErrorFailed:
+            msg = @"授权请求失败";
+            break;
+        case ASAuthorizationErrorInvalidResponse:
+            msg = @"授权请求无响应";
+            break;
+        case ASAuthorizationErrorNotHandled:
+            msg = @"授权请求未处理";
+            break;
+        case ASAuthorizationErrorUnknown:
+            msg = @"授权失败，原因未知";
+            break;
+        default:
+            break;
+    }
+    
+    NSDictionary *resultDic = [[NSDictionary alloc] initWithObjectsAndKeys:@"error", @"result", msg, @"message", nil];
     [flutterChannel invokeMethod:@"error" arguments:resultDic];
 }
 
